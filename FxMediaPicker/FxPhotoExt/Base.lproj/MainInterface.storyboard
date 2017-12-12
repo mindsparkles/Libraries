@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="CustomViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZJQ-9x-Jnr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="484"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THd-fQ-iVW">
+                                <rect key="frame" x="0.0" y="484" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Sepia" id="6Nf-gK-9K7">
+                                        <connections>
+                                            <action selector="onClickSepia:" destination="ObA-dk-sSI" id="0lw-Cu-aJE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mono" id="adx-2W-QDP">
+                                        <connections>
+                                            <action selector="onClickMono:" destination="ObA-dk-sSI" id="hie-jg-AEW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Invert" id="gi8-IT-qgl">
+                                        <connections>
+                                            <action selector="onClickInvert:" destination="ObA-dk-sSI" id="gaE-pF-Gub"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="THd-fQ-iVW" secondAttribute="bottom" id="3Bg-t2-zBt"/>
+                            <constraint firstAttribute="trailing" secondItem="ZJQ-9x-Jnr" secondAttribute="trailing" id="K5U-0W-j7y"/>
+                            <constraint firstAttribute="trailing" secondItem="THd-fQ-iVW" secondAttribute="trailing" id="Ld4-tK-wGn"/>
+                            <constraint firstItem="ZJQ-9x-Jnr" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="MvL-x9-cT9"/>
+                            <constraint firstItem="THd-fQ-iVW" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="V4p-tk-1Nc"/>
+                            <constraint firstItem="ZJQ-9x-Jnr" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" id="eDI-kJ-I2q"/>
+                            <constraint firstItem="THd-fQ-iVW" firstAttribute="top" secondItem="ZJQ-9x-Jnr" secondAttribute="bottom" id="q9Z-rT-gFF"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="imageView" destination="ZJQ-9x-Jnr" id="DLn-ho-Nt1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.8" y="123.23838080959521"/>
+        </scene>
+    </scenes>
+</document>
